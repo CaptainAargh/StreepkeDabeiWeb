@@ -12,7 +12,12 @@ export let lijst = [
     {id: 5, title: "JINS", personen: ["Jan", "Bas"]},
     {id: 6, title: "Fourage", personen: ["Vogel", "Spotlijster"]},
 ]
+export function klikOpTak(list) {
+    console.log(list)
+    list.innerHTML = ""
+    list.innerHTML = TakkenLijst
 
+}
 export class TakkenLijst extends Component {
     Laatste;
     Kapoenen;

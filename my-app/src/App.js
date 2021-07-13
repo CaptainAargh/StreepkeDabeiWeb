@@ -6,12 +6,12 @@ import { Users } from './components/Users'
 import { DisplayBoard } from './components/DisplayBoard'
 import CreateUser from './components/CreateUser'
 import { getAllUsers, createUser } from './services/UserService'
-
-import { PersonenLijst } from "./components/PersonenLijst";
-import { TakkenLijst } from "./components/TakkenLijst";
+import {readData} from "./services/ConnectionService";
+import { PersonenLijst } from './components/PersonenLijst';
+import { TakkenLijst } from './components/TakkenLijst';
 
 function App() {
-
+  readData()
   const [user, setUser] = useState({})
   const [users, setUsers] = useState([])
   const [numberOfUsers, setNumberOfUsers] = useState(0)
@@ -54,7 +54,6 @@ function App() {
       }
       setUser(user)
   }
-
 
     return (
         <div className="App">

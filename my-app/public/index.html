@@ -27,6 +27,29 @@
     <title>React App</title>
   </head>
   <body>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBTOkylPmbehPBWYVeLpvZO6r9W61jORmg",
+      authDomain: "scoutsapp-1cb2b.firebaseapp.com",
+      databaseURL: "https://scoutsapp-1cb2b.firebaseio.com",
+      projectId: "scoutsapp-1cb2b",
+      storageBucket: "scoutsapp-1cb2b.appspot.com",
+      messagingSenderId: "817913971802",
+      appId: "1:817913971802:web:27e0f6e2b95547a5cec463",
+      measurementId: "G-1NHEB9987J"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -57,7 +80,7 @@
     }
   </script>
   <script>
-    import { klikOpTak } from "src/index.js";
+    import { klikOpTak } from "src/components/TakkenLijst/klikOpTak";
 
     let x = document.getElementById('takElement');
     let list = document.getElementById('perosnenlist');
